@@ -1,0 +1,244 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F860DF6-2505-40CF-B206-33050695B8BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DXQLMT</RootNamespace>
+    <AssemblyName>DXQLMT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.XtraBars.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackEnd\AccountDAO\AddAccountDAO.cs" />
+    <Compile Include="BackEnd\AccountDAO\ChangePassDAO.cs" />
+    <Compile Include="BackEnd\AccountDAO\FaccountDAO.cs" />
+    <Compile Include="BackEnd\BillDAO\BillDAO.cs" />
+    <Compile Include="BackEnd\BillDAO\ThongKeTaiChinhDAO.cs" />
+    <Compile Include="BackEnd\DataProvide.cs" />
+    <Compile Include="BackEnd\EditProductDAO.cs" />
+    <Compile Include="BackEnd\FcenterDAO.cs" />
+    <Compile Include="BackEnd\LoginDAO.cs" />
+    <Compile Include="FrontEnd\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\Faccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\Faccount.Designer.cs">
+      <DependentUpon>Faccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\Add_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Form Account\Add_Account.Designer.cs">
+      <DependentUpon>Add_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Form Bill\TaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Form Bill\TaoHoaDon.Designer.cs">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Form Bill\ThongKeTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Form Bill\ThongKeTaiChinh.Designer.cs">
+      <DependentUpon>ThongKeTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FormCentrer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FormCentrer.Designer.cs">
+      <DependentUpon>FormCentrer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Form Account\Add_Account.resx">
+      <DependentUpon>Add_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Form Account\ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Form Account\Faccount.resx">
+      <DependentUpon>Faccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Form Bill\TaoHoaDon.resx">
+      <DependentUpon>TaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Form Bill\ThongKeTaiChinh.resx">
+      <DependentUpon>ThongKeTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FormCentrer.resx">
+      <DependentUpon>FormCentrer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5039684.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-system-software-update.24.png" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-edit-delete.24.png" />
+    <None Include="Resources\Kyo-Tux-Delikate-Add.24.png" />
+    <None Include="Resources\Kyo-Tux-Delikate-Add.32.png" />
+    <None Include="Resources\Etherbrian-Webuosities-Fix-it.32.png" />
+    <None Include="Resources\Dakirby309-Windows-8-Metro-Web-Acer-Metro.24.png" />
+    <None Include="Resources\Dakirby309-Windows-8-Metro-Web-Dell-Metro.24.png" />
+    <None Include="Resources\Icons8-Windows-8-Ecommerce-Bill.24.png" />
+    <None Include="Resources\Icons8-Windows-8-Ecommerce-Bill.32.png" />
+    <None Include="Resources\Icons8-Windows-8-Ecommerce-Bill.48.png" />
+    <None Include="Resources\Gianni-Polito-Colobrush-Loupe.24.png" />
+    <None Include="Resources\Inipagi-Job-Seeker-Laptop-1.48.png" />
+    <None Include="Resources\Inipagi-Job-Seeker-Laptop-1.24.png" />
+    <None Include="Resources\Graphicloads-Flat-Finance-Person.16.png" />
+    <None Include="Resources\Icons8-Windows-8-Users-Exit.16.png" />
+    <None Include="Resources\Custom-Icon-Design-Mono-General-4-Padlock-unlock.16.png" />
+    <None Include="Resources\Custom-Icon-Design-Mono-General-4-Padlock-unlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataProvide.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataProvide_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DataProvide.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-7-Save.32.png" />
+    <None Include="Resources\Icons8-Windows-8-Security-Password-1.32.png" />
+    <None Include="Resources\Icons8-Ios7-Users-Change-User.32.png" />
+    <None Include="Resources\Pictogrammers-Material-Account-box.32.png" />
+    <None Include="Resources\Icons8-Windows-8-User-Interface-Logout.32.png" />
+    <None Include="Resources\Icons8-Windows-8-User-Interface-Logout.48.png" />
+    <None Include="Resources\Hopstarter-Soft-Scraps-Button-Refresh.24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
