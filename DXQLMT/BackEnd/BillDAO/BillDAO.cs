@@ -57,8 +57,8 @@ namespace DXQLMT.BackEnd.BillDAO
             query = "delete from TempTable";
             DataProvide.Instance.ExecuteNonQuery(query);
             decimal Total = 0;
-            query = "select SUM(ThanhTien) from BillInfor ";
-            Total = (decimal)DataProvide.Instance.ExecuteScalar(query);
+            query = "select SUM(ThanhTien) from BillInfor where Id_Bill = @Id ";
+            Total = (decimal)DataProvide.Instance.ExecuteScalar(query, new object[] { Id });
             query = "insert into Bill values( @Id , @Name , @NgayBan , @sdt , @tongtien , @ghichu )";
             DataProvide.Instance.ExecuteNonQuery(query, new object[]{ Id, name, date, sdt, Total, ghichu});
         }
